@@ -44,7 +44,7 @@
             return greetings[this.language] + ' ' + this.firstName + '!';
         },
 
-        formalGreting: function() {
+        formalGreeting: function() {
             return formalGreetings[this.language] + ', ' +this.fullName();
         },
 
@@ -52,7 +52,7 @@
             var msg;
             
             if (formal) {
-                msg = this.formalGreting();
+                msg = this.formalGreeting();
             } else {
                 msg = this.greeting();
             }
@@ -81,7 +81,7 @@
             return this;
         },
 
-        HTMLGreetnig: function(selector, formal) {
+        HTMLGreeting: function(selector, formal) {
             if(!$) {
                 throw 'jQuery not loaded';
             }
@@ -92,7 +92,7 @@
 
             var msg;
             if (formal) {
-                msg = this.formalGretin g();
+                msg = this.formalGreeting();
             } else {
                 msg = this.greeting();
             }
