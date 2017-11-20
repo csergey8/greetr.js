@@ -72,6 +72,28 @@
             this.validate();
 
             return this;
+        },
+
+        HTMLGreetnig: function(selector, formal) {
+            if(!$) {
+                throw 'jQuery not loaded';
+            }
+
+            if (!selector) {
+                throw 'Missing jQuery selector';
+            }
+
+            var msg;
+            if (formal) {
+                msg = this.formalGretin g();
+            } else {
+                msg = this.greeting();
+            }
+
+            $(selector).html(msg);
+
+            return this;
+
         }
 
 
