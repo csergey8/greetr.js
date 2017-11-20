@@ -1,26 +1,33 @@
 (function(global, $) {
 
+    // 'new' an object
     var Greetr = function (firstName, lastName, language) {
         return new Greetr.init(firstName, lastName, language);
     }
 
+    // hidden within the scope of the IIFE and never directly accessible 
     var supportedLangs = ['en', 'es'];
 
+    //informal greetings
     var greetings = {
         en: 'Hello',
         es: 'Hola'
     };
 
+    // formal greeting
     var formalGreetings = {
         en: 'Greetings',
         es: 'Saludos'
     };
 
+    // logger messages
     var logMessages = {
         en: 'Logged in',
         es: 'Inicio sesion'
     }
 
+
+    // create prototype
     Greetr.prototype = {
 
         fullName: function() {
